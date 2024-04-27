@@ -13,7 +13,7 @@ api = OpenAI(api_key=OPENAI_API_KEY)
 
 def get_response(user_input):
     response = api.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model="ft:gpt-3.5-turbo-0125:personal:firstaidmodel16:9Il0mv2b:ckpt-step-116",
         messages=[
             {"role": "system", "content": "Act as a nurse who gives suggestions for first aid."},
             {"role": "user", "content": user_input}
@@ -29,7 +29,7 @@ def get_result():
     query = request.form['search_query']
     response = get_response(query)
     #result = response.choices[0].message.content
-    return render_template('result.html', result=response)
+    return render_template('result.html', query=query, result=response)
 
 #user_input = input()
 #print(get_response(user_input))
