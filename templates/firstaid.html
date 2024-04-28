@@ -6,53 +6,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ title }}</title>
     <link rel="stylesheet" href="../static/css/styles.css" />
-  </head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        h1 {
+            color: brown;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .list-section {
+            margin-bottom: 30px;
+        }
+        .list-section h2 {
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .list-item {
+            margin-left: 20px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>First Aid Kit Essentials</h1>
 
-  <body>
-    <h1>First Aid</h1>
-    <p>
-      A well-prepared first aid kit is essential for addressing minor injuries
-      and providing initial care in emergency situations. Here's a list of items
-      commonly recommended for inclusion in a basic first aid kit:
-    </p>
-    <p>
-      1. Bandages: <br />
-      • Adhesive bandages (various sizes) <br />
-      • Sterile gauze pads (different sizes) <br />
-      • Sterile adhesive tape <br />
-      2. Wound Care Supplies: <br />
-      • Antiseptic wipes or solution (e.g., alcohol wipes, iodine solution)
-      <br />
-      • Antibiotic ointment or cream <br />
-      • Sterile saline solution (for cleaning wounds) <br />
-      3. Tools and Instruments:<br />
-      Scissors (blunt-tip for safety) <br />
-      Tweezers (for splinter removal)<br />
-      Thermometer (preferably digital) <br />
-      Disposable gloves (latex-free for allergy considerations) <br />
-      4. Miscellaneous Supplies: <br />
-      • Cotton balls or swabs Safety pins<br />
-      • Disposable face masks (for CPR or preventing infection spread)<br />
-      5. Medications: <br />
-      • Pain relievers (e.g., acetaminophen, ibuprofen) <br />
-      • Antihistamine tablets (for allergic reactions) <br />
-      • Aspirin (if recommended by healthcare provider for heart conditions)
-      <br />
-      6. Emergency Items: <br />
-      • Emergency contact information (including doctors, hospitals, poison
-      control)<br />
-      • First aid manual or instructions Emergency blanket (for warmth or shock)
-      <br />
-      • Instant cold packs (for reducing swelling or pain) <br />
-      7. Personal Care: <br />
-      • Hand sanitizer or soap (for hand hygiene) <br />
-      • Sunscreen (if applicable)<br />
-      • Insect repellent<br />
-      8. Specialized Items (based on needs):<br />
-      • EpiPen (for severe allergic reactions)<br />
-      • Inhaler (for asthma) <br />
-      • Glucose gel or tablets (for diabetes) <br />
-      • Medical alert cards or bracelets (if relevant)<br />
-    </p>
+        <button class="back-button" onclick="window.location.href='../';">
+          <img src="../static/images/home_logo.png.crdownload" alt="Back to Home Page" class="button-icon" />
+        </button>
+        <p>
+            A well-prepared first aid kit is essential for addressing minor injuries and providing initial care in emergency situations. Below is a list of items commonly recommended for inclusion in a basic first aid kit:
+        </p>
+        <section class="list-section">
+            <h2>1. Bandages:</h2>
+            <ul class="list-item">
+                <li>Adhesive bandages (various sizes)</li>
+                <li>Sterile gauze pads (different sizes)</li>
+                <li>Sterile adhesive tape</li>
+            </ul>
+        </section>
+        <section class="list-section">
+            <h2>2. Wound Care Supplies:</h2>
+            <ul class="list-item">
+                <li>Antiseptic wipes or solution (e.g., alcohol wipes, iodine solution)</li>
+                <li>Antibiotic ointment or cream</li>
+                <li>Sterile saline solution (for cleaning wounds)</li>
+            </ul>
+        </section>
+        <section class="list-section">
+            <h2>3. Tools and Instruments:</h2>
+            <ul class="list-item">
+                <li>Scissors (blunt-tip for safety)</li>
+                <li>Tweezers (for splinter removal)</li>
+                <li>Thermometer (preferably digital)</li>
+                <li>Disposable gloves (latex-free for allergy considerations)</li>
+            </ul>
+        </section>
+        <section class="list-section">
+            <h2>4. Miscellaneous Supplies:</h2>
+            <ul class="list-item">
+                <li>Cotton balls or swabs</li>
+                <li>Safety pins</li>
+                <li>Disposable face masks (for CPR or preventing infection spread)</li>
+            </ul>
+        </section>
+        <section class="list-section">
+            <h2>5. Medications:</h2>
+            <ul class="list-item">
+                <li>Pain relievers (e.g., acetaminophen, ibuprofen)</li>
+                <li>Antihistamine tablets (for allergic reactions)</li>
+                <li>Aspirin (if recommended by healthcare provider for heart conditions)</li>
+            </ul>
+        </section>
+        <section class="list-section">
+            <h2>6. Emergency Items:</h2>
+            <ul class="list-item">
+                <li>Emergency contact information (including doctors, hospitals, poison control)</li>
+                <li>First aid manual or instructions</li>
+                <li>Emergency blanket (for warmth or shock)</li>
+                <li>Instant cold packs (for reducing swelling or pain)</li>
+            </ul>
+        </section>
+        <section class="list-section">
+            <h2>7. Personal Care:</h2>
+            <ul class="list-item">
+                <li>Hand sanitizer or soap (for hand hygiene)</li>
+                <li>Sunscreen (if applicable)</li>
+                <li>Insect repellent</li>
+            </ul> 
+        </section>
+        <section class="list-section">
+            <h2>8. Specialized Items (based on needs):</h2>
+            <ul class="list-item">
+                <li>EpiPen (for severe allergic reactions)</li>
+                <li>Inhaler (for asthma)</li>
+                <li>Glucose gel or tablets (for diabetes)</li>
+                <li>Medical alert cards or bracelets (if relevant)</li>
+            </ul>
+        </section>
+    
+    </div>
   </body>
 </html>

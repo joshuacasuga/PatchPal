@@ -1,28 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ title }}</title>
     <link rel="stylesheet" href="../static/css/styles.css" />
-  </head>
-
-  <body>
-    <h1>Emergency Hotlines</h1>
-    <p style="font-size: 20px; text-align: center">
-      <br />
-      <strong>Emergency Hotline: </strong>911 <br />
-      <strong>National Suicide Prevention Lifeline: </strong
-      >1-800-273-8255<br />
-      <strong>National Domestic Violence Hotline: </strong>1-800-799-7233<br />
-      <strong>National Poison Control Center: </strong>1-800-222-1222<br />
-      <strong>National Human Trafficking Hotline: </strong>1-888-373-7888<br />
-      <strong>National Sexual Assault Hotline: </strong>1-800-656-4673<br />
-      <strong>National Child Abuse Hotline: </strong>1-800-422-4453<br />
-      <strong>Veterans Crisis Line: </strong>1-800-273-8255<br />
-      <strong>Disaster Distress Helpline: </strong>1-800-985-5990<br />
-      <strong>National Runaway Safeline: </strong>1-800-786-2929<br />
-    </p>
-  </body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        h1 {
+            color: brown;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .hotline-list {
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.6;
+        }
+        .hotline-list strong {
+            color: #555;
+        }
+        .back-button-container {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="back-button-container">
+          <button class="back-button" onclick="window.location.href='../';">
+            <img src="../static/images/home_logo.png.crdownload" alt="Back to Home Page" class="button-icon" />
+          </button>
+        </div>
+        
+        <!-- Main content -->
+        <h1>Emergency Hotlines</h1>
+        <div class="hotline-list">
+            <p><strong>Emergency Hotline:</strong> 911</p>
+            <p><strong>National Suicide Prevention Lifeline:</strong> 1-800-273-8255</p>
+            <p><strong>National Domestic Violence Hotline:</strong> 1-800-799-7233</p>
+            <p><strong>National Poison Control Center:</strong> 1-800-222-1222</p>
+            <p><strong>National Human Trafficking Hotline:</strong> 1-888-373-7888</p>
+            <p><strong>National Sexual Assault Hotline:</strong> 1-800-656-4673</p>
+            <p><strong>National Child Abuse Hotline:</strong> 1-800-422-4453</p>
+            <p><strong>Veterans Crisis Line:</strong> 1-800-273-8255</p>
+            <p><strong>Disaster Distress Helpline:</strong> 1-800-985-5990</p>
+            <p><strong>National Runaway Safeline:</strong> 1-800-786-2929</p>
+        </div>
+    </div>
+</body>
 </html>
+
