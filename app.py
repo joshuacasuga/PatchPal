@@ -69,7 +69,7 @@ def get_top_tracks():
         auth = user_token['access_token']
     )
     return sp.current_user_top_tracks(
-         limit = 5,
+         limit = 1,
          offset = 0,
          time_range = "short_term"
     )
