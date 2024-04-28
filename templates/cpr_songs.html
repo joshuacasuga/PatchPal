@@ -10,7 +10,14 @@
 
   <body>
     <h1>CPR Songs</h1>
-    <p>{{ aha_playlist }}</p>
-    <p>{{ user_cpr_songs }}</p>
+    <div>
+      <center>
+        <p>Recommended Songs</p>
+        <br />
+        {% for track in user_songs.tracks %}
+        <p>{{ track.name }} - {{ track.artists[0].name }}</p>
+        {% endfor -%}
+      </center>
+    </div>
   </body>
 </html>

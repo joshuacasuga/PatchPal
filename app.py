@@ -76,26 +76,26 @@ def user_cpr_songs():   #this suggests songs that the user has played w/100-12o 
 
 @app.route('/')
 def index():
-    return render_template('index.html', title="First Aid")
+    return render_template('index.html', title="Patch Pal")
 
 @app.route('/result', methods=['POST'])
 def get_result():
     query = request.form['search_query']
     response = get_response(query)
     #result = response.choices[0].message.content
-    return render_template('result.html', query=query, result=response)
+    return render_template('result.html', query=query, result=response, title="Patch Pal")
 
 @app.route('/firstaid')
 def first_aid():
-    return render_template('firstaid.html')
+    return render_template('firstaid.html', title="Patch Pal")
 
 @app.route('/cpr')
 def cpr():
-    return render_template('cpr.html')
+    return render_template('cpr.html', title="Patch Pal")
 
 @app.route('/hotlines')
 def hotlines():
-    return render_template('hotlines.html')
+    return render_template('hotlines.html', title="Patch Pal")
 
 @app.route('/login')
 def login():
@@ -117,7 +117,7 @@ def redirect_page():
 def cpr_songs():
     aha_playlist = call_AHA_playlist()
     user_songs = user_cpr_songs()
-    return render_template('cpr_songs.html', aha_playlist=aha_playlist, user_songs=user_songs)
+    return render_template('cpr_songs.html', aha_playlist=aha_playlist, user_songs=user_songs, title="Patch Pal")
 
 #user_input = input()
 #print(get_response(user_input))
