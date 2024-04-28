@@ -1,69 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ title }}</title>
-    <link rel="stylesheet" href="../static/css/styles.css" />
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CPR Information</title>
 
-  <body>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 20px;
+      padding: 0;
+      background: #fff;
+    }
+    .content {
+      width: 70%;
+      margin: 0 auto;
+    }
+    h1, h2 {
+      color: brown;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      padding: 5px 0;
+    }
+    li:before {
+      content: '• ';
+      color: brown;
+      font-weight: bold;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    .section h2 {
+      border-bottom: 2px solid brown;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #1DB954;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .back-button {
+      border: none;
+      background-color: transparent;
+      padding: 10px;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+    .back-button img {
+      width: 32px; 
+      height: auto;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="content">
+
+    <div class="back-button-container">
+      <button class="back-button" onclick="window.history.back();">
+          <img src="../static/images/home_logo.png.crdownload" alt="Back to Home Page" /> <!-- Update your src as needed -->
+      </button>
+    </div>
+
     <h1>About CPR</h1>
-    <div style="text-align: center">
-      <br />
-      <p>
-        Cardiopulmonary Resuscitation, or CPR, is an emergency procedure
-        performed on a patient, when the patient heart stops beating. When
-        performed immediately, the patient's survival rate for cardiac arrest
-        can double or triple. When the heart stops beating, blood is not being
-        pumped and stopping oxygen flow throughout the body. Performing CPR
-        effectively pumps the blood for the patient until the heart can pump
-        itself again.
-      </p>
-      <br />
-      <p>
-        There are two common types of CPR. 1. Conventional CPR: This is for
-        trained professionals, and invovles hand compressions and mouth to
-        mouth. 2. Hands-Only CPR: This is for the general public, who may not be
-        specifically trained to do CPR.
-      </p>
-      <br />
-    </div>
-    <div style="text-align: center">
+    <p>Cardiopulmonary Resuscitation, or CPR, is an emergency procedure performed on a patient when the heart stops beating...</p>
+
+   
+    <div class="section">
       <h2>How to Perform Hands-Only CPR</h2>
-      <p>
-        Before CPR: 1. Make sure site is secure and safe, and check if the
-        person is responsive. Check for breathing. 2. If patient does not
-        respond, call 911 for assistance. Now beginning CPR: 1. Make sure
-        patient is on a firm and flat surface. 2. Kneel next to the patient, and
-        ensure your knees are shoulder-width apart. 3. Place the heel of one
-        hand in the center of their chest, with your other hand on top.
-        Interlace your fingers and make sure they are up off the chest. 4.
-        Position your body so that your shoulders are directly over your hands.
-        Lock your elbows to keep your arms straight. 5. Give continuous
-        compressions. Push hard and fast (2 inches deep), to the beat of Bee
-        Gees' song “Stayin' Alive.” (or another 100-120 BPM song).
-      </p>
-      <br />
+      <ul>
+        <li>Ensure the site is secure and the patient is responsive.</li>
+        <li>If unresponsive, call 911 immediately.</li>
+        <li>Position the patient on a firm, flat surface.</li>
+        <li>Start compressions in the center of the chest to the beat of a 100-120 BPM song like "Stayin' Alive."</li>
+      </ul>
     </div>
-    <div style="text-align: center">
+
+    <div class="section">
       <h2>Find Songs with 100-120 BPM for CPR!</h2>
-      <p>
-        CPR compressions should be paced to 100-120 BPM (Beats per minute).
-        Several songs like Bee Gees' song “Stayin' Alive.” fit this criteria.
-        Connect your spotify below to find suggested songs that fit the criteria
-        for you!
-      </p>
-      <br />
-      <button onclick="location.href = '/login';">Log in with Spotify</button>
+      <p>CPR compressions should be paced to 100-120 BPM (Beats per minute). Several songs like Bee Gees' song “Stayin' Alive.” fit this criteria.</p>
+      <a href="/login" class="button">Connect with Spotify</a>
     </div>
-    <div style="text-align: center">
-      <br /><br />
-      <p>
-        All information here is provided from the American Heart Association
-        Website.
-      </p>
+
+    <div class="section">
+      <p>All information here is provided from the American Heart Association Website.</p>
     </div>
-  </body>
+  </div>
+</body>
 </html>
