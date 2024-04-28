@@ -53,8 +53,6 @@ def redirect():
       return redirect(url_for("cpr_songs", _external = True))
 
 
-
-
 #spotify_ID for the American Heart Association's CPR playlist: 2mU2FNAhSOtQwW0hBgQMaK
 def call_AHA_playlist():   #this offers the user the AHA cpr official playlist
     user_token = get_user_token()
@@ -64,16 +62,33 @@ def call_AHA_playlist():   #this offers the user the AHA cpr official playlist
     AHA_playlist = sp.playlist(AHA_CPR_PLAYLIST_ID, fields=None, market=None, additional_types=('track',))
     return AHA_playlist
 
-
-#def user_cpr_songs():   #this suggests songs that the user has played w/100-12o bpm for cpr
- #   user_token = get_user_token()
- #   sp = spotipy.Spotify(
-  #       auth = user_token['access_token']
-   # )
-    #AHA_playlist = sp.playlist(AHA_CPR_PLAYLIST_ID, fields=None, market=None, additional_types=('track',))
-    #AHA_tracks = sp.playlist_tracks(AHA_CPR_PLAYLIST_ID, fields=None, limit=20, offset=0, market=None, additional_types=('track',))
-    #return AHA_playlist
-      
+#we first get top tracks of user for the seed_ids as the seed_tracks the fuction bases it off of
+def get_top_tracks():
+    user_token = get_user_token()
+    sp = spotipy.Spotify(
+        auth = user_token['access_token']
+    )
+    return sp.current_user_top_tracks(
+         limit = 5,
+         offset = 0,
+         time_range = "short_term"
+    )
+     
+#we use the get recommendations endpoint to get tracks between the bpm 100-120.
+def user_cpr_songs():   #this suggests songs that the user has played w/100-12o bpm for cpr
+    user_token = get_user_token()
+    sp = spotipy.Spotify(
+         auth = user_token['access_token']
+    )
+    curr_user_top = get_top_tracks()
+    recommended_cpr_songs = sp.recommendations(
+        seed_tracks = curr_user_top,
+        limit = 10,
+        country = None,
+        min_tempo = 100,
+        max_tempo = 120
+    )
+    return recommended_cpr_songs
       
       
 
