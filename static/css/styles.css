@@ -142,15 +142,26 @@ input[type="submit"]:hover {
     display: inline-block;
     top: 20px;
     left: 20px;
-    padding: 10px 20px;
+    padding: 20px 20px;
     background-color: #ff1f1f;
     color: white;
     text-decoration: none;
     border: none;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-size: 16px;
-    z-index: 9999;
+    box-shadow: 0 4px 8px rgb(0, 0, 0,0.1);
+}
+
+.button-icon {
+    position: absolute;
+    /* left: 5px; */
+    /* Adjust the position of the image */
+    top: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    /* Set the width of the image */
+    height: 20px;
+    /* Set the height of the image */
 }
 
 .back-button:hover {
