@@ -13,6 +13,9 @@ import base64
 
 
 USER_TOKEN = "token_info"
+AHA_CPR_PLAYLIST_ID = "2mU2FNAhSOtQwW0hBgQMaK"
+AHA_CPR_PLAYLIST_URL = "https://api.spotify.com/v1/playlists/" + AHA_CPR_PLAYLIST_ID
+AHA_CPR_PLAYLIST_TRACKS = AHA_CPR_PLAYLIST_URL + "/tracks"
 app = Flask(__name__)
 
 #for getting authentication for spotify!
@@ -30,10 +33,7 @@ def get_user_token():
 
 @app.route('/cpr_songs')
 def cpr_songs():
-    user_token = get_user_token()
-    sp = spotipy.Spotify(
-         auth = user_token['access_token']
-    )
+
     return render_template('cpr_songs.html')
 
 @app.route('/login')
@@ -44,8 +44,6 @@ def login():
 
 @app.route('/redirect')
 def redirect():
-      #clears cache
-
       #continues
       sp_oauth = creating_spotify_oauth()
       session.clear()
@@ -57,12 +55,25 @@ def redirect():
 
 
 
+#spotify_ID for the American Heart Association's CPR playlist: 2mU2FNAhSOtQwW0hBgQMaK
+def call_AHA_playlist():   #this offers the user the AHA cpr official playlist
+    user_token = get_user_token()
+    sp = spotipy.Spotify(
+         auth = user_token['access_token']
+    )
+    AHA_playlist = sp.playlist(AHA_CPR_PLAYLIST_ID, fields=None, market=None, additional_types=('track',))
+    return AHA_playlist
 
-#def call_AHA_playlist():   #this offers the user the AHA cpr official playlist
-      
 
 #def user_cpr_songs():   #this suggests songs that the user has played w/100-12o bpm for cpr
-      #spotify_ID for the American Heart Association's CPR playlist: 2mU2FNAhSOtQwW0hBgQMaK
+ #   user_token = get_user_token()
+ #   sp = spotipy.Spotify(
+  #       auth = user_token['access_token']
+   # )
+    #AHA_playlist = sp.playlist(AHA_CPR_PLAYLIST_ID, fields=None, market=None, additional_types=('track',))
+    #AHA_tracks = sp.playlist_tracks(AHA_CPR_PLAYLIST_ID, fields=None, limit=20, offset=0, market=None, additional_types=('track',))
+    #return AHA_playlist
+      
       
       
 
