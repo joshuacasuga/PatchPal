@@ -91,6 +91,7 @@ input[type="submit"]:hover {
     font-weight: bold;
     text-align: center;
     margin-bottom: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: #ff1f1f;
     outline: none;
     /* Remove outline */

@@ -1,75 +1,44 @@
 <!DOCTYPE html>
 
 <html>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <head>
-    <link rel="stylesheet" href="../static/css/styles.css" />
-    <!-- <title>{{ title }}</title> -->
-  </head>
+<head>
+  <link rel="stylesheet" href="../static/css/styles.css" />
+</head>
 
-  <body>
-    <div class="container">
-      <h1 class="title">First Aid</h1>
-      <form action="/result" method="post">
-        <input
-          type="text"
-          name="search_query"
-          placeholder="How can I help you?"
-        />
-        <input type="submit" value="Search" />
-      </form>
-    </div>
-    <div class="container">
-      <table>
-        <td style="text-align: center">
-          <a
-            href="http://127.0.0.1:5000/firstaid"
-            target="_blank"
-            style="text-decoration: none"
-          >
-            <img
-              class="clipart"
-              src="../static/images/firstaid.png"
-              loading="lazy"
-              style="width: 300px"
-            />
-          </a>
-          <p>First-Aid Kit Guide</p>
-        </td>
-        <td style="text-align: center">
-          <a
-            href="http://127.0.0.1:5000/cpr"
-            target="_blank"
-            style="text-decoration: none"
-          >
-            <img
-              class="clipart"
-              src="../static/images/cpr.png"
-              loading="lazy"
-              style="width: 300px"
-            />
-          </a>
-          <p>CPR Guide</p>
-        </td>
-        <td style="text-align: center">
-          <a
-            href="http://127.0.0.1:5000/hotlines"
-            target="_blank"
-            style="text-decoration: none"
-          >
-            <img
-              class="clipart"
-              src="../static/images/hotlines.png"
-              loading="lazy"
-              style="width: 300px"
-            />
-          </a>
-          <p>Emergency Hotlines</p>
-        </td>
-      </table>
-    </div>
+<body>
+  <div class="container">
+    <h1 class="title">Patch Pal</h1>
+    <form action="/result" method="post">
+      <input type="text" name="search_query" placeholder="How can I help you?" />
+      <input type="submit" value="Search" />
+    </form>
+  </div>
+  <div class="container">
+    <table>
+      <td style="text-align: center">
+        <a href="http://127.0.0.1:5000/firstaid" target="_blank" style="text-decoration: none">
+          <img class="clipart" src="../static/images/firstaid.png" loading="lazy" style="width: 300px" />
+        </a>
+        <p>First-Aid Kit Guide</p>
+      </td>
+      <td style="text-align: center">
+        <a href="http://127.0.0.1:5000/cpr" target="_blank" style="text-decoration: none">
+          <img class="clipart" src="../static/images/cpr.png" loading="lazy" style="width: 300px" />
+        </a>
+        <p>CPR Guide</p>
+      </td>
+      <td style="text-align: center">
+        <a href="http://127.0.0.1:5000/hotlines" target="_blank" style="text-decoration: none">
+          <img class="clipart" src="../static/images/hotlines.png" loading="lazy" style="width: 300px" />
+        </a>
+        <p>Emergency Hotlines</p>
+      </td>
+    </table>
+  </div>
 
-    <script src="../static/js/script.js"></script>
-  </body>
+  <script src="../static/js/script.js"></script>
+</body>
+
 </html>
