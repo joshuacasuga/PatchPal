@@ -131,6 +131,12 @@ input[type="submit"]:hover {
 
 }
 
+.clipart{
+    max-width: 85%;
+    height: auto;
+    text-align: center;
+}
+
 /* shadowed box */
 /* max-width: 800px;
     margin: 50px auto;

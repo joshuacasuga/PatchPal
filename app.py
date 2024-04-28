@@ -31,5 +31,12 @@ def get_result():
     #result = response.choices[0].message.content
     return render_template('result.html', query=query, result=response)
 
+@app.route('/firstaid')
+def first_aid():
+    return render_template('firstaid.html')
+
+@app.route('/cpr')
+def cpr():
+    return render_template('cpr.html')
 #user_input = input()
 #print(get_response(user_input))
