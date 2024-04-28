@@ -10,7 +10,7 @@ h1 {
 .button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #ff1f1f;
     color: white;
     border: none;
     border-radius: 5px;
@@ -21,12 +21,12 @@ h1 {
 
 /* Hover effect */
 .button:hover {
-    background-color: #0056b3;
+    background-color: #ba0000;
 }
 
 /* Active effect */
 .button:active {
-    background-color: #0056b3;
+    background-color: #ff1f1f;
     transform: translateY(1px);
 }
 
@@ -75,14 +75,14 @@ input[type="submit"] {
     padding: 10px;
     border: none;
     border-radius: 4px;
-    background-color: #007bff;
+    background-color: #ff1f1f;
     color: white;
     font-size: 16px;
     cursor: pointer;
 }
 
 input[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #ba0000;
 }
 
 /* New styles for title */
@@ -91,7 +91,7 @@ input[type="submit"]:hover {
     font-weight: bold;
     text-align: center;
     margin-top: 50px;
-    color: #007bff;
+    color: #ff1f1f;
     outline: none;
     /* Remove outline */
     border: none;
@@ -131,16 +131,28 @@ input[type="submit"]:hover {
 
 }
 
-.clipart{
+.clipart {
     max-width: 85%;
     height: auto;
     text-align: center;
 }
 
-/* shadowed box */
-/* max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    border-radius: 8px;
+.back-button {
+    position: fixed;
+    display: inline-block;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #ff1f1f;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9; */
+    font-size: 16px;
+    z-index: 9999;
+}
+
+.back-button:hover {
+    background-color: #ba0000;
+}
