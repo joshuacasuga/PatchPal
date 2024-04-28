@@ -21,6 +21,8 @@
     </div>
     <!-- alter the result so that the shadowed box in the search bar elongates toward the bottom and is under the result paragraph as well -->
     <div class="result-box">
+      <p>Showing results for: "{{ query }}"</p>
+      <br /><br />
       <p class="result">{{ result }}</p>
     </div>
     <div>
@@ -31,27 +33,6 @@
           class="button-icon"
         />
       </button>
-    </div>
-    <script src="../static/js/script.js"></script>
-  </body>
-
-  <body>
-    <div class="container">
-      <h1 class="title">First Aid</h1>
-      <form action="/result" method="post">
-        <input
-          type="text"
-          name="search_query"
-          placeholder="How can I help you?"
-        />
-        <input type="submit" value="Search" />
-      </form>
-    </div>
-    <!-- alter the result so that the shadowed box in the search bar elongates toward the bottom and is under the result paragraph as well -->
-    <div class="result-box">
-      <p>Showing results for: "{{ query }}"</p>
-      <br /><br />
-      <p class="result">{{ result }}</p>
     </div>
     <script src="../static/js/script.js"></script>
   </body>
